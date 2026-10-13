@@ -1,0 +1,26 @@
+CREATE DATABASE BankDBBB;
+
+USE BankDBBB;
+
+CREATE TABLE Bank (
+    AccountNumber BIGINT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    PhoneNumber VARCHAR(25),
+    IFSCCode VARCHAR(15)
+);
+
+INSERT INTO Bank (AccountNumber, Name, PhoneNumber, IFSCCode)
+VALUES
+(111003,'Adithya','9537271937','FSC6006'),
+(565103,'Marwa','7215187025','FSC6036'),
+(112503,'Mariam','9925373626','FSC6046'),
+(151333,'Madhav','9800183333','FSC6206');
+
+SELECT * FROM Bank;
+
+UPDATE Bank
+SET PhoneNumber = '9925373626'
+WHERE AccountNumber = 111003;
+
+DELETE FROM Bank
+WHERE AccountNumber = 111003;
